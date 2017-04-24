@@ -1,0 +1,25 @@
+{
+  "name": "hratx26-mvp",
+  "version": "1.0.0",
+  "description": "Sniffles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-watch src/index.js",
+    "live-server": "live-server --open=./index.html --port=8081"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aalcott14/hratx26-mvp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aalcott14/hratx26-mvp/issues"
+  },
+  "homepage": "https://github.com/aalcott14/hratx26-mvp#_PRESS-RELEASE",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-watch": "^2.0.6"
+  }
+}

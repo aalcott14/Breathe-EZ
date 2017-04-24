@@ -24,7 +24,7 @@ Once the project moves into development, the press release can be used as a touc
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
 
 ## Summary ##
-  Sniffles allows you to search for your local allergy conditions using weather.com's allergy forcaster. You will receive an easy-to-read overview of the allergy conditions in your area and also details on measures you can take to combat your allergy struggles.
+  Sniffles allows you to search for your local allergy conditions using pollen.com's allergy forcaster. You will receive an easy-to-read overview of the allergy conditions in your area and also details on the allergens themselves. Get all the information and knowledge you need to understand what is causing your allergies and face them head on.
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
 ## Problem ##
@@ -32,7 +32,7 @@ Once the project moves into development, the press release can be used as a touc
   > Describe the problem your product solves.
 
 ## Solution ##
-  Sniffles allows you to see which allergens will potentially be putting a damper on your day, allowing you to take measures to be more prepare.
+  Sniffles allows you to see which allergens will potentially be putting a damper on your day, allowing you to take measures to be more prepared.
   > Describe how your product elegantly solves the problem.
 
 ## Quote from You ##
