@@ -1,4 +1,4 @@
 ReactDOM.render(
-  <App searchWUnderground={searchWUnderground} API_KEY={WUnderground_API_KEY}/>,
+  <App />,
   document.getElementById('app')
 );

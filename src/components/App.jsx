@@ -3,8 +3,12 @@ class App extends React.Component {
     return (
       <div className = "app">
         <div className = "nav">
-          <div className = "search">
+          <Nav />
+        </div>
         <div className = "display">
-          )
+          <Display />
+        </div>
+      </div>
+    );
   }
 }

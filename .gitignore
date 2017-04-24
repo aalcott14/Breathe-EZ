@@ -21,6 +21,7 @@ coverage
 # Compiled Dirs (http://nodejs.org/api/addons.html)
 build/
 dist/
+compiled/
 
 # Dependency directorys
 # Deployed apps should consider commenting these lines out:
@@ -33,3 +34,13 @@ bower_components/
 .floobit
 .floo
 .flooignore
+
+## NPM ##
+node_modules/
+
+## APIs ##
+src/config/WUnderground.js
+compiled/config/WUnderground.js
+
+
+

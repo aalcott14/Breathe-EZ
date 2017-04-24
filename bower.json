@@ -1,0 +1,16 @@
+{
+  "name": "hratx26-mvp",
+  "version": "0.0.0",
+  "homepage": "https://github.com/aalcott14/hratx26-mvp",
+  "authors": [
+    "Hack Reactor Students <accounts@hackreactor.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
