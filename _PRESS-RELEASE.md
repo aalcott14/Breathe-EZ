@@ -17,28 +17,36 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  Sniffles: The Local Allergy Authority
 
 ## Sub-Heading ##
+  Allergies are no fun and Sniffles allows you to discover today's local allergy forecast and be more prepared to take on your day!
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
 
 ## Summary ##
+  Sniffles allows you to search for your local allergy conditions using weather.com's allergy forcaster. You will receive an easy-to-read overview of the allergy conditions in your area and also details on measures you can take to combat your allergy struggles.
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
 ## Problem ##
+  Allergies are hard to deal with, and sometimes can really ruin your day and productivity.
   > Describe the problem your product solves.
 
 ## Solution ##
+  Sniffles allows you to see which allergens will potentially be putting a damper on your day, allowing you to take measures to be more prepare.
   > Describe how your product elegantly solves the problem.
 
 ## Quote from You ##
+  "I love Sniffles" - me
   > A quote from a spokesperson in your company.
 
 ## How to Get Started ##
+  Just type in your city and state!
   > Describe how easy it is to get started.
 
 ## Customer Quote ##
+  "I used to suffer day in and day out from allergies, and could never find an easy-to-use resource that gives me only the information I need to be prepared. Sniffles has been a life saver!" -Bob Loblaw
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
 ## Closing and Call to Action ##
+  "Don't be a victim to allergies anymore. Search your area's allergy conditions and take on your day!"
   > Wrap it up and give pointers where the reader should go next.
