@@ -26,6 +26,7 @@
     "babel-watch": "^2.0.6"
   },
   "dependencies": {
+    "jquery": "^2.15.1",
     "express": "^4.15.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
