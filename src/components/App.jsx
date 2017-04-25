@@ -1,13 +1,15 @@
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      location: null,
+      entries: []
+    };
+  }
   render() {
     return (
-      <div className = "app">
-        <div className = "nav">
-          <Nav />
-        </div>
-        <div className = "display">
-          <Display />
-        </div>
+      <div className = "nav">
+        <Nav />
       </div>
     );
   }

@@ -1,9 +1,9 @@
 class Search extends React.Component {
   render() {
     return (
-      <form>
-        <input class="search-input" type="search" name="locationSearch" placeholder="Search for your city, state"></input>
-        <input class="search-submit" type="submit" value=""></input>
+      <form id="searchForm">
+        <input className="search-input" type="text" name="locationSearch" placeholder="City, State"/>
+        <input className="search-submit" type="submit" value="GO"/>
       </form>
     );
   }
