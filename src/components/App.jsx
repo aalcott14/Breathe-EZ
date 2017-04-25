@@ -59,7 +59,7 @@ class App extends React.Component {
           <Search getLocation={this.getLocation.bind(this)}/>
         </div>
         <div className = "location">
-          <Location location={this.state.location}/>
+          <Location location={this.state.location} color={this.state.entries.breezometer_color}/>
         </div>
         <div className = "entryList">
           <EntryList pollutantInfo={this.state.entries} pollutantText={this.state.text}/>
