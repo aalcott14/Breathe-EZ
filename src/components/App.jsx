@@ -11,48 +11,40 @@ class App extends React.Component {
   }
 
   getCoordinates (city, state) {
+    var context = this;
     $.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + city + ',+' + state + '&key=AIzaSyAbq13fsulOoassOY7zxBdIHgY2-sEvyLk', function(data) {
       var lat = data.results[0].geometry.location.lat;
       var lng = data.results[0].geometry.location.lng;
-      console.log('lat', lat);
-      console.log('lng', lng);
-      this.setState({
+      context.setState({
         latitude: lat,
         longitude: lng
       })
-      // this.setState({
-      //     coordinates: data
-      //   }, function() {
-      //     console.log(this.state.coordinates);
-      //   })
+      console.log(context.state);
     })
-    // .done((items) => {
-    //   callback(items, function (data) {
-    //     console.log(data);
-    //     this.setState({
-    //       coordinates: data
-    //     }, function() {
-    //       console.log(this.state.coordinates);
-    //     })
-    //   });
-    // })
-    // .fail((err) => {
-    //   console.log(err);
-    // })
   }
 
   getLocation () {
     var location = $('#input').val();
     var array = location.split(', ');
-    var city = array[0];
-    var state = array[1];
+    var city = array[0].charAt(0).toUpperCase() + array[0].slice(1);
+    var state = array[1].toUpperCase();
     this.setState({
       city: city,
       state: state
     }, function() {
-      this.getCoordinates(city, state)
+      this.getCoordinates(city, state);
     });
-    
+  }
+
+  getAirConditions () {
+    var context = this;
+    $.get('https://api.breezometer.com/baqi/?lat=' + context.state.latitude + '&lon=' + context.state.longitude + '&key=79b4fa25d91f4be3aac9c17bab707d7d', function(data) {
+      console.log(data)
+      context.setState({
+        entries: data
+      })
+      console.log(context.state);
+    })
   }
 
 
@@ -62,8 +54,11 @@ class App extends React.Component {
         <div className = "search">
           <Search getLocation={this.getLocation.bind(this)}/>
         </div>
-        <div className = "display">
-          <Display />
+        <div className = "location">
+          <Location city={this.state.city} state={this.state.state}/>
+        </div>
+        <div className = "entryList">
+          <EntryList />
         </div>
       </div>
     );

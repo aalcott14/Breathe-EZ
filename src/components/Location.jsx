@@ -1,8 +1,12 @@
 class Location extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  
   render() {
     return (
       <div id="location">
-        Location
+        {this.props.city}, {this.props.state}
       </div>
     );
   }

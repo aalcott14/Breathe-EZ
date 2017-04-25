@@ -5,7 +5,7 @@ class Search extends React.Component {
   render() {
     return (
       <form id="searchForm">
-        <input id="input" type="text" name="locationSearch" placeholder="City, State"/>
+        <input id="input" type="text" name="locationSearch" placeholder="City, ST"/>
         <input className="button" type="button" value="GO" onClick={this.props.getLocation}/>
       </form>
     );
