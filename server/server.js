@@ -4,8 +4,8 @@ var bodyParser = require('body-parser')
 
 var app = express();
 
-app.use(express.static(path.join(__dirname,"../compiled/")));
-app.use(express.static(path.join(__dirname,"../styles")));
+app.use(express.static(path.join(__dirname,"../client/compiled/")));
+app.use(express.static(path.join(__dirname,"../client/styles")));
 app.use(express.static(path.join(__dirname,"../node_modules")));
 
 app.use(bodyParser.json());
@@ -15,5 +15,5 @@ app.listen(8080,function(){
 })
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname,'../index.html'));
+  res.sendFile(path.join(__dirname,'../client/index.html'));
 })
