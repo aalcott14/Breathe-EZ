@@ -1,3 +1,10 @@
+const $ = require('jquery');
+const google = require('../config/Google');
+const breezo = require('../config/BreezoMeter');
+
+const GOOGLE_API_KEY = google.API_KEY;
+const BREEZOMETER_API_KEY = breezo.API_KEY;
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -12,7 +19,7 @@ class App extends React.Component {
 
   getCoordinates (city, state) {
     var context = this;
-    $.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + city + ',+' + state + '&key=AIzaSyAbq13fsulOoassOY7zxBdIHgY2-sEvyLk', function(data) {
+    $.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + city + ',+' + state + '&key=' + GOOGLE_API_KEY, function(data) {
       var lat = data.results[0].geometry.location.lat;
       var lng = data.results[0].geometry.location.lng;
       context.setState({
@@ -38,7 +45,7 @@ class App extends React.Component {
 
   getAirConditions () {
     var context = this;
-    $.get('https://api.breezometer.com/baqi/?lat=' + context.state.latitude + '&lon=' + context.state.longitude + '&key=79b4fa25d91f4be3aac9c17bab707d7d', function(data) {
+    $.get('https://api.breezometer.com/baqi/?lat=' + context.state.latitude + '&lon=' + context.state.longitude + '&key=' + BREEZOMETER_API_KEY, function(data) {
       if (data.data_valid === false) {
         alert('Data not available in your area');
       } else {

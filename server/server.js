@@ -1,9 +1,11 @@
-var express = require("express");
-var path = require("path");
-var bodyParser = require('body-parser')
+const express = require("express");
+const path = require("path");
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
 
-var app = express();
+const app = express();
 
+app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname,"../client/compiled/")));
 app.use(express.static(path.join(__dirname,"../client/styles")));
 app.use(express.static(path.join(__dirname,"../node_modules")));
@@ -11,7 +13,7 @@ app.use(express.static(path.join(__dirname,"../node_modules")));
 app.use(bodyParser.json());
 
 app.listen(8080,function(){
-    console.log("Started listening on port", 8080);
+    console.log("Listening on port", 8080);
 })
 
 app.get('/', function(req, res) {
