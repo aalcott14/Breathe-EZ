@@ -19,7 +19,8 @@ class App extends React.Component {
 
   getCoordinates (city, state) {
     var context = this;
-    axios('https://maps.googleapis.com/maps/api/geocode/json?address=' + city + ',+' + state + '&key=' + GOOGLE_API_KEY, function(data) {
+    axios.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + city + ',+' + state + '&key=' + GOOGLE_API_KEY)
+    .then((data) => {
       var lat = data.results[0].geometry.location.lat;
       var lng = data.results[0].geometry.location.lng;
       context.setState({
@@ -28,6 +29,9 @@ class App extends React.Component {
       }, function() {
         this.getAirConditions();
       })
+    })
+    .catch((err) => {
+      console.log('ERROR GETTING LOCATION COORDINATES:', err);
     })
   }
 
@@ -45,7 +49,8 @@ class App extends React.Component {
 
   getAirConditions () {
     var context = this;
-    axios('https://api.breezometer.com/baqi/?lat=' + context.state.latitude + '&lon=' + context.state.longitude + '&key=' + BREEZOMETER_API_KEY, function(data) {
+    axios.get('https://api.breezometer.com/baqi/?lat=' + context.state.latitude + '&lon=' + context.state.longitude + '&key=' + BREEZOMETER_API_KEY)
+    .then((data) => {
       if (data.data_valid === false) {
         alert('Data not available in your area');
       } else {
@@ -55,6 +60,9 @@ class App extends React.Component {
         })
         console.log(context.state);
       }
+    })
+    .catch((err) => {
+      console.log('ERROR GETTING AIR CONDITIONS:', err);
     })
   }
 
