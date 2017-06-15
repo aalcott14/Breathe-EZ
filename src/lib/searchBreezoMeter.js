@@ -1,3 +1,0 @@
-window.searchWUnderground = function() {
-  
-}
