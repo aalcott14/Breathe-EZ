@@ -38,7 +38,4 @@ bower_components/
 node_modules/
 
 ## APIs ##
-src/config/WUnderground.js
-
-
-
+client/src/config/
