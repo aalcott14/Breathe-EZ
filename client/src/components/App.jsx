@@ -1,4 +1,5 @@
 const axios = require ('axios');
+
 const google = require('../config/Google');
 const breezo = require('../config/BreezoMeter');
 
@@ -13,7 +14,8 @@ class App extends React.Component {
       latitude: null,
       longitude: null,
       entries: {},
-      text: []
+      text: [],
+      showData: false,
     }
   }
 
@@ -56,12 +58,16 @@ class App extends React.Component {
       } else {
         context.setState({
           entries: data,
-          text: [data.dominant_pollutant_text.causes, data.dominant_pollutant_text.effects].join(' ')
+          text: [data.dominant_pollutant_text.causes, data.dominant_pollutant_text.effects].join(' '),
+          showData: true
         })
         console.log(context.state);
       }
     })
     .catch((err) => {
+      context.setState({
+        showData: false
+      })
       console.log('ERROR GETTING AIR CONDITIONS:', err);
     })
   }
